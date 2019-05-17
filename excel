@@ -118,5 +118,13 @@ ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
 driver.switchTo().window(tabs2.get(1));
 Thread.sleep(5000);
 */
+to close popup
+ /*  driver.switchTo().frame("notification-frame-~2514428c7");
+             driver.findElement(By.xpath("//i[@class='wewidgeticon we_close']")).click();
+             driver.switchTo().defaultContent();*/
+             
+                           WebElement flight=driver.findElement(By.xpath("(//span[@class='flightNo'])[1]"));
+              String Display=flight.getText();
+              System.out.print("Flight ID is :"+Display);
 
 
